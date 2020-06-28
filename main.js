@@ -1,4 +1,5 @@
 
+
 // api key : f7a7826cb3658f7517fac625d852d446
 
 // SELECT ELEMENTS
@@ -105,7 +106,7 @@ function wordSearch() {
     var wordToSearch = document.getElementById('searchBox').value;
     var request1 = new XMLHttpRequest();
 
-    request1.open('GET', 'https://api.wordnik.com/v4/word.json/' + wordToSearch + '/definitions?limit=10&includeRelated=false&useCanonical=false&includeTags=false&api_key=YOUR_API_KEY', true);
+    request1.open('GET', 'https://api.wordnik.com/v4/word.json/' + wordToSearch + '/definitions?limit=10&includeRelated=false&useCanonical=false&includeTags=false&api_key=er6w7658ib862zuvpspnb7r9fwm7ga0rkdkef3a5b4ri4wc2b', true);
 
     request1.onload = function () {
         var data = JSON.parse(this.response);
@@ -121,7 +122,7 @@ function wordSearch() {
 
     request1.send();
     var request2 = new XMLHttpRequest();
-    request2.open('GET', 'https://api.wordnik.com/v4/word.json/' + wordToSearch + '/topExample?useCanonical=false&api_key=YOUR_API_KEY', true);
+    request2.open('GET', 'https://api.wordnik.com/v4/word.json/' + wordToSearch + '/topExample?useCanonical=false&api_key=er6w7658ib862zuvpspnb7r9fwm7ga0rkdkef3a5b4ri4wc2b', true);
     request2.onload = function () {
         var data2 = JSON.parse(this.response);
         if (request2.status >= 200 && request2.status < 400) {
@@ -133,7 +134,7 @@ function wordSearch() {
 
     request2.send();
     var request3 = new XMLHttpRequest();
-    request3.open('GET', 'https://api.wordnik.com/v4/word.json/' + wordToSearch + '/audio?useCanonical=false&limit=50&api_key=YOUR_API_KEY', true);
+    request3.open('GET', 'https://api.wordnik.com/v4/word.json/' + wordToSearch + '/audio?useCanonical=false&limit=50&api_key=er6w7658ib862zuvpspnb7r9fwm7ga0rkdkef3a5b4ri4wc2b', true);
     request3.onload = function () {
 
         var data3 = JSON.parse(this.response);
@@ -151,6 +152,9 @@ function wordSearch() {
 }
 
 
+
+
+	
 
 
 	
