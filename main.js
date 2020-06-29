@@ -1,6 +1,6 @@
 
-
 // api key : f7a7826cb3658f7517fac625d852d446
+
 
 // SELECT ELEMENTS
 const iconElement = document.querySelector(".weather-icon");
@@ -34,7 +34,7 @@ function setPosition(position){
     let latitude = position.coords.latitude;
     let longitude = position.coords.longitude;
     
-    getWeather(latitude, longitude);
+    getWeather(52.379189, 4.899431);
 }
 
 // SHOW ERROR WHEN THERE IS AN ISSUE WITH GEOLOCATION SERVICE
@@ -44,8 +44,8 @@ function showError(error){
 }
 
 // GET WEATHER FROM API PROVIDER
-function getWeather(latitude, longitude){
-    let api = `http://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${key}`;
+function getWeather(52.379189, 4.899431){
+    let api = `http://api.openweathermap.org/data/2.5/weather?lat=${52.379189}&lon=${4.899431}&appid=${f7a7826cb3658f7517fac625d852d446}`;
     
     fetch(api)
         .then(function(response){
@@ -69,7 +69,7 @@ function displayWeather(){
     iconElement.innerHTML = `<img src="icons/${weather.iconId}.png"/>`;
     tempElement.innerHTML = `${weather.temperature.value}°<span>C</span>`;
     descElement.innerHTML = weather.description;
-    locationElement.innerHTML = `${weather.city}, ${weather.country}`;
+    locationElement.innerHTML = `${weather.Amsterdam}, ${weather.Netherlands}`;
 }
 
 // C to F conversion
@@ -157,4 +157,3 @@ function wordSearch() {
 	
 
 
-	
